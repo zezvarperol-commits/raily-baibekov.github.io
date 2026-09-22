@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Terminal 73</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ВАТЕРМАРКА -->
+    <div class="watermark-conveyor">
+        <div class="watermark-track">
+            <div class="watermark-row">
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+            </div>
+            <div class="watermark-row">
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+            </div>
+            <div class="watermark-row">
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+            </div>
+            <div class="watermark-row">
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+            </div>
+            <div class="watermark-row">
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+            </div>
+            <div class="watermark-row">
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+                <span>Байбеков</span><span>Байбеков</span><span>Байбеков</span><span>Байбеков</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ПОДПИСЬ АВТОРА -->
+    <div class="author-signature" id="authorSignature">
+        by Suzarux
+    </div>
+
+    <!-- ФОНОВЫЕ ИСТОЧНИКИ СВЕТА -->
+    <div class="bg-light light-1"></div>
+    <div class="bg-light light-2"></div>
+    <div class="bg-light light-3"></div>
+
+    <!-- Зона для возврата меню -->
+    <div class="nav-trigger-zone" id="navTrigger"></div>
+
+    <!-- НАВИГАЦИЯ -->
+    <nav id="mainNav">
+        <button class="nav-btn active" onclick="openPage('home', this)">Главная</button>
+        <button class="nav-btn" onclick="openPage('schedule', this)">Расписание</button>
+        <button class="nav-btn" onclick="openPage('vpr', this)">ВПР</button>
+        <button class="nav-btn" onclick="openPage('asurso', this)">АСУ РСО</button>
+        <button class="nav-btn" onclick="openPage('team', this)">Администрация</button>
+        <button class="nav-btn" onclick="openPage('history', this)">История</button>
+        <button class="nav-btn" onclick="openPage('contacts', this)">Контакты</button>
+    </nav>
+
+    <div class="container">
+
+        <!-- СТРАНИЦА 1: ГЛАВНАЯ -->
+        <div id="home" class="page active">
+            <div class="terminal-box" style="text-align: center; animation: pulseBorder 4s infinite;">
+                <h1>[ SCHOOL_73 : SAMARA ]</h1>
+                <p>Добро пожаловать в цифровое пространство школы №73.</p>
+                <p class="accent-text">Система готова к работе.</p>
+            </div>
+
+            <div class="terminal-box">
+                <h2>> Профильное обучение (10-11 класс)</h2>
+                <p>Старшая школа предлагает углубленное изучение предметов по четырем направлениям. Это позволяет учащимся максимально подготовиться к сдаче ЕГЭ и поступлению в ведущие вузы страны.</p>
+                <p style="font-size: 0.85rem; color: var(--accent-color);">> Нажмите на карточку профиля, чтобы увидеть специальности и вузы РФ.</p>
+
+                <div class="profiles-grid">
+                    <div class="profile-card" onclick="openProfileModal('social')">
+                        <div class="profile-title"><span class="profile-tag">01</span> Соц-эконом</div>
+                        <p><strong>Предметы:</strong> Профильная математика + Обществознание</p>
+                        <p style="font-size: 0.9rem; color: #888;">Специальности: Экономист, Менеджер, Юрист, Социолог, Маркетолог.</p>
+                    </div>
+                    <div class="profile-card" onclick="openProfileModal('biochem')">
+                        <div class="profile-title"><span class="profile-tag">02</span> Био-Хим</div>
+                        <p><strong>Предметы:</strong> Биология + Химия</p>
+                        <p style="font-size: 0.9rem; color: #888;">Специальности: Врач, Фармацевт, Биолог, Эколог, Ветеринар.</p>
+                    </div>
+                    <div class="profile-card" onclick="openProfileModal('tech')">
+                        <div class="profile-title"><span class="profile-tag">03</span> Технический</div>
+                        <p><strong>Предметы:</strong> Физика + Профильная математика</p>
+                        <p style="font-size: 0.9rem; color: #888;">Специальности: Инженер, Программист, Архитектор, Физик-ядерщик.</p>
+                    </div>
+                    <div class="profile-card" onclick="openProfileModal('psych')">
+                        <div class="profile-title"><span class="profile-tag">04</span> Психологический</div>
+                        <p><strong>Предметы:</strong> Биология + Обществознание</p>
+                        <p style="font-size: 0.9rem; color: #888;">Специальности: Психолог, Педагог, Социальный работник, HR-специалист.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- СТРАНИЦА 2: РАСПИСАНИЕ -->
+        <div id="schedule" class="page">
+            <div class="terminal-box">
+                <h2>> Модуль: Расписание занятий</h2>
+                <div class="schedule-error">
+                    <h2 style="color: #8b5cf6; font-size: 2rem; letter-spacing: 5px; border: none;">
+                        [ ВРЕМЕННЫЕ НЕПОЛАДКИ ]
+                    </h2>
+                    <p style="color: #6b7280; margin-top: 20px;">
+                        > Ошибка соединения с базой данных расписания...<br>
+                        > Пожалуйста, обратитесь в учебную часть.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- СТРАНИЦА ВПР -->
+        <div id="vpr" class="page">
+            <div class="terminal-box">
+                <h2>> Всероссийские проверочные работы (ВПР)</h2>
+
+                <div class="vpr-intro">
+                    <p><strong>ВПР</strong> — это комплексный проект в области оценки качества образования, направленный на развитие единого образовательного пространства в Российской Федерации, мониторинг введения ФГОС и формирование единых стандартизированных подходов к оцениванию образовательных достижений учащихся.</p>
+                    <p>Указанные цели достигаются за счёт проведения ВПР в единое время по единым комплектам заданий, а также за счёт использования единых для всей страны критериев оценивания.</p>
+                </div>
+
+                <div class="vpr-info-grid">
+                    <div class="vpr-card">
+                        <h3>> Что такое ВПР</h3>
+                        <p>Всероссийские проверочные работы — это итоговые контрольные работы, которые проводятся в школах по всей стране по единым заданиям и единым критериям оценки.</p>
+                        <p>Это не экзамен и не ЕГЭ. ВПР нужны для того, чтобы проверить, как школа выполняет государственные образовательные стандарты.</p>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Зачем проводятся</h3>
+                        <ul>
+                            <li>Оценка качества образования в стране</li>
+                            <li>Мониторинг введения ФГОС</li>
+                            <li>Единые ориентиры в оценке результатов</li>
+                            <li>Помощь школе в выявлении пробелов</li>
+                            <li>Подготовка к итоговой аттестации</li>
+                        </ul>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Кто участвует</h3>
+                        <p><strong>В 2026 году ВПР проводятся в:</strong></p>
+                        <ul>
+                            <li>4 классах</li>
+                            <li>5–8 классах</li>
+                            <li>10 классах</li>
+                        </ul>
+                        <p style="margin-top: 10px;">По отдельным предметам согласно Порядку и Плану-графику.</p>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Как проходят</h3>
+                        <ul>
+                            <li>В единое время по всей стране</li>
+                            <li>По единым комплектам заданий</li>
+                            <li>По единым критериям оценивания</li>
+                            <li>На специальных бланках или в компьютерной форме</li>
+                            <li>Продолжительность — от 45 до 90 минут (зависит от класса и предмета)</li>
+                        </ul>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Как оцениваются</h3>
+                        <p>Работы проверяются школьными учителями по единым критериям, разработанным Федеральным институтом оценки качества образования (ФИОКО).</p>
+                        <p>Результаты ВПР не влияют на итоговые оценки в аттестате, но используются для анализа качества обучения.</p>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Как подготовиться</h3>
+                        <ul>
+                            <li>Решать демоверсии на сайте ФИОКО</li>
+                            <li>Тренироваться на портале «Решу ВПР»</li>
+                            <li>Повторять пройденный материал</li>
+                            <li>Внимательно читать инструкции к заданиям</li>
+                            <li>Не волноваться — это не экзамен</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terminal-box">
+                <h2>> Памятка для учащихся</h2>
+                <div class="vpr-intro" style="border-left-color: #3b82f6;">
+                    <p><strong>Семь правил, чтобы успешно написать ВПР:</strong></p>
+                    <ul style="list-style: none; padding-left: 0; margin-top: 10px;">
+                        <li style="padding: 8px 0 8px 25px; position: relative; color: #b0b0b0; line-height: 1.5;">
+                            <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">01.</span>
+                            Внимательно прочитай инструкцию перед началом работы.
+                        </li>
+                        <li style="padding: 8px 0 8px 25px; position: relative; color: #b0b0b0; line-height: 1.5;">
+                            <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">02.</span>
+                            Распредели время: сначала лёгкие задания, потом сложные.
+                        </li>
+                        <li style="padding: 8px 0 8px 25px; position: relative; color: #b0b0b0; line-height: 1.5;">
+                            <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">03.</span>
+                            Читай задание до конца, не торопись.
+                        </li>
+                        <li style="padding: 8px 0 8px 25px; position: relative; color: #b0b0b0; line-height: 1.5;">
+                            <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">04.</span>
+                            Если не знаешь ответ — пропусти и вернись позже.
+                        </li>
+                        <li style="padding: 8px 0 8px 25px; position: relative; color: #b0b0b0; line-height: 1.5;">
+                            <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">05.</span>
+                            Пиши разборчиво, чтобы проверяющий понял твой ответ.
+                        </li>
+                        <li style="padding: 8px 0 8px 25px; position: relative; color: #b0b0b0; line-height: 1.5;">
+                            <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">06.</span>
+                            Проверь работу перед сдачей.
+                        </li>
+                        <li style="padding: 8px 0 8px 25px; position: relative; color: #b0b0b0; line-height: 1.5;">
+                            <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">07.</span>
+                            Не волнуйся — ВПР не влияет на итоговые оценки.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- СТРАНИЦА АСУ РСО -->
+        <div id="asurso" class="page">
+            <div class="terminal-box">
+                <h2>> АСУ РСО</h2>
+
+                <div class="vpr-intro">
+                    <p><strong>АСУ РСО</strong> (Автоматизированная система управления региональной системой образования) — это государственная информационная система Самарской области, которая объединяет школы и органы управления образованием в единую сеть.</p>
+                    <p>По сути, это <strong>электронный дневник и журнал</strong>, доступный через интернет.</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <button class="asurso-btn" onclick="openLink('https://asurso.ru')">
+                        <span class="asurso-icon">></span> ВОЙТИ В АСУ РСО
+                    </button>
+                </div>
+
+                <div class="vpr-info-grid">
+                    <div class="vpr-card">
+                        <h3>> Для родителей</h3>
+                        <ul>
+                            <li>Оперативно узнавать об успеваемости ребёнка</li>
+                            <li>Проверять посещаемость уроков</li>
+                            <li>Общаться с учителями и администрацией</li>
+                            <li>Видеть домашние задания</li>
+                            <li>Получать уведомления о родительских собраниях</li>
+                        </ul>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Для учеников</h3>
+                        <ul>
+                            <li>Просматривать расписание уроков</li>
+                            <li>Видеть свои оценки и домашние задания</li>
+                            <li>Смотреть отчёты о своей успеваемости</li>
+                            <li>Общаться с одноклассниками и учителями</li>
+                            <li>Вести портфолио достижений</li>
+                        </ul>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Как войти в систему</h3>
+                        <ul>
+                            <li>Перейдите на сайт <strong>asurso.ru</strong></li>
+                            <li>Выберите регион: <strong>Самарская область</strong></li>
+                            <li>Выберите вашу школу</li>
+                            <li>Введите логин и пароль</li>
+                            <li>Нажмите «Войти»</li>
+                        </ul>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Где взять логин и пароль</h3>
+                        <p>Логин и пароль для входа в АСУ РСО <strong>выдаёт классный руководитель</strong>.</p>
+                        <p>Если вы забыли пароль или не можете войти — обратитесь к классному руководителю или школьному администратору АСУ РСО.</p>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Вход через Госуслуги</h3>
+                        <p>С 2017 года вход в АСУ РСО возможен через <strong>учётную запись Госуслуг</strong> (ЕСИА).</p>
+                        <p>Для этого необходимо привязать профиль АСУ РСО ребёнка к вашей учётной записи на портале Госуслуг.</p>
+                    </div>
+
+                    <div class="vpr-card">
+                        <h3>> Важно знать</h3>
+                        <ul>
+                            <li>Система работает круглосуточно</li>
+                            <li>Не требует установки программ — это веб-сайт</li>
+                            <li>Доступ с любого устройства с интернетом</li>
+                            <li>Берегите свой логин и пароль</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- СТРАНИЦА АДМИНИСТРАЦИЯ -->
+        <div id="team" class="page">
+            <div class="terminal-box">
+                <h2>> Руководство школы</h2>
+                <p>Административный состав и педагогический коллектив.</p>
+
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="СЮДА URL" alt="Дрожджа Наталья Борисовна" onerror="this.style.display='none'; this.parentElement.innerHTML='Загрузите фото';">
+                        </div>
+                        <div class="team-name">Дрожджа Наталья Борисовна</div>
+                        <div class="team-role">Директор школы</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="СЮДА URL" alt="Завуч 1" onerror="this.style.display='none'; this.parentElement.innerHTML='Загрузите фото';">
+                        </div>
+                        <div class="team-name">Завуч 1</div>
+                        <div class="team-role">Заместитель директора по УВР</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="СЮДА URL" alt="Завуч 2" onerror="this.style.display='none'; this.parentElement.innerHTML='Загрузите фото';">
+                        </div>
+                        <div class="team-name">Завуч 2</div>
+                        <div class="team-role">Заместитель по ВР</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="СЮДА URL" alt="Завуч 3" onerror="this.style.display='none'; this.parentElement.innerHTML='Загрузите фото';">
+                        </div>
+                        <div class="team-name">Завуч 3</div>
+                        <div class="team-role">Заместитель по НМР</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="СЮДА URL" alt="Педагог-психолог" onerror="this.style.display='none'; this.parentElement.innerHTML='Загрузите фото';">
+                        </div>
+                        <div class="team-name">Педагог-психолог</div>
+                        <div class="team-role">Служба сопровождения</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="СЮДА URL" alt="Соц. педагог" onerror="this.style.display='none'; this.parentElement.innerHTML='Загрузите фото';">
+                        </div>
+                        <div class="team-name">Соц. педагог</div>
+                        <div class="team-role">Служба сопровождения</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="СЮДА URL" alt="Зав. библиотекой" onerror="this.style.display='none'; this.parentElement.innerHTML='Загрузите фото';">
+                        </div>
+                        <div class="team-name">Зав. библиотекой</div>
+                        <div class="team-role">Библиотека</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="СЮДА URL" alt="Старший вожатый" onerror="this.style.display='none'; this.parentElement.innerHTML='Загрузите фото';">
+                        </div>
+                        <div class="team-name">Старший вожатый</div>
+                        <div class="team-role">Детское объединение</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- СТРАНИЦА ИСТОРИЯ -->
+        <div id="history" class="page">
+            <div class="terminal-box">
+                <h2>> Архив: История школы</h2>
+                <div class="history-text">
+                    <p>В 1960 году по типовому проекту на улице Майской была построена школа – интернат № 3. Среди маленьких домишек, окружавших её со всех сторон, «храм науки» в то время был самым высоким зданием.</p>
+                    <p>Первым директором был назначен Отроха М. Н. Прежде чем стать руководителем и войти в солидный директорский кабинет, ему пришлось в полной мере узнать, что такое стройка. Беседа с прорабами, рабочими, сметы, стройматериалы и т. д. Это потом уже будет Первое сентября, первые ученики, учебные планы, работа с детьми и родителями.</p>
+                    <p>Пять лет он осуществлял руководство школой-интернатом. По воспоминаниям современников, первый директор был благородным и крепким, как утес, человеком. По архивным данным, в 1960 году в школе-интернате обучалось 32 класса-комплекта. Общее количество учащихся – 936 человек. На базе школы-интерната в это время ещё работала вечерняя школа и функционировала районная лыжная база.</p>
+                    <p>При директорах Демба М. А., Затрутине В. А., Ермаковой М. И, Горяйновой А. П. продолжали развиваться лучшие школьные традиции: совместная работа и праздничные мероприятия с заводом «Металлург», экскурсии по городу и на производство, встречи с известными людьми города.</p>
+                    <p>Шли годы. Менялась страна, вместе с ней менялась и школа. К этому времени маленькие частные строения вокруг школы стали заменяться новыми многоэтажками. Самое высокое когда-то здание школы затерялось теперь в домах-гигантах. Здесь начал строиться жилой 16 микрорайон Авиационного завода.</p>
+                    <p>С 1984 по 1992 год школу возглавляла Диженина Т. Я. В эту трудную, как для страны, так и для советской системы образования, эпоху перемен школа устояла от соблазнов ярких и не всегда оправданных нововведений. Татьяна Яковлевна в своей педагогической деятельности отдавала приоритет традиционному качественному образованию.</p>
+                    <p>С каждым годом новые директора — Бочков В.В., Савенков А. А., Залесская Е. А., Горячева Е. В.- вписывают все новые странички в историю развития школы. На базе школы открывается филиал ДШИ №8 «Радуга», осуществляется плодотворная работа в социально-педагогическом комплексе с ТОСом 16 микрорайона (праздники – «День пожилого человека», «День Матери», Новогодняя елка в микрорайоне, Масленица). Пополняется и материально техническая база: открыт компьютерный класс.</p>
+                    <p>С 2009 года и по сегодняшней день пост директора школы занимает Наталья Борисовна Дрожджа.</p>
+                    <p>Возглавляя педагогический коллектив и бережно храня лучшие традиции школы, Наталья Борисовна старается преобразовать её в современное и конкурентоспособное образовательное учреждение.</p>
+                    <p>В здании проведена реорганизация информационного пространства ОУ.</p>
+                    <p>В школе осуществляется работа по созданию условий для повышения здоровьесберегающих и здоровьеформирующих ресурсов. Школа находится в эксперименте по профильному обучению. В этом году школа получила статус «Инновационно-активная школа».</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- СТРАНИЦА КОНТАКТЫ -->
+        <div id="contacts" class="page">
+            <div class="terminal-box">
+                <h2>> Контактные данные</h2>
+
+                <div class="contact-grid">
+                    <div>
+                        <div class="contact-item">
+                            <div class="contact-icon">></div>
+                            <div class="contact-info">
+                                <strong>Полное наименование</strong>
+                                <span>Муниципальное бюджетное общеобразовательное учреждение «Школа №73» городского округа Самара</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">></div>
+                            <div class="contact-info">
+                                <strong>Адрес</strong>
+                                <span>443105, Приволжский Федеральный округ, Самарская область, городской округ Самара, ул. Майская, д. 47</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">></div>
+                            <div class="contact-info">
+                                <strong>Телефон</strong>
+                                <span><a href="tel:+78469332158" style="color: #b0b0b0; text-decoration: none;">+7 (846) 933-21-58</a></span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">></div>
+                            <div class="contact-info">
+                                <strong>E-mail</strong>
+                                <span><a href="mailto:school73-samara@mail.ru" style="color: #b0b0b0; text-decoration: none;">school73-samara@mail.ru</a><br>
+                                <a href="mailto:school_73@samara.edu.ru" style="color: #b0b0b0; text-decoration: none;">school_73@samara.edu.ru</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="map-container">
+                            <div id="yandexMapTarget" style="width: 100%; height: 100%;"></div>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #6b7280; margin-top: 10px; text-align: center;">
+                            МБОУ Школа №73, ул. Майская, 47
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ПРОФИЛЯ -->
+    <div class="profile-modal-overlay" id="profileModalOverlay">
+        <div class="profile-modal" id="profileModal">
+            <button class="profile-modal-close" onclick="closeProfileModal()">✕</button>
+            <h3 id="profileModalTitle"></h3>
+            <ul class="profile-modal-list" id="profileModalList"></ul>
+        </div>
+    </div>
+
+    <!-- ФУТЕР -->
+    <footer>
+        <p>443105, г.о. Самара, ул. Майская, д.47</p>
+        <p>Тел.: <a href="tel:+78469332158">+7 (846) 933-21-58</a></p>
+        <p>E-mail: <a href="mailto:school73-samara@mail.ru">school73-samara@mail.ru</a> | <a href="mailto:school_73@samara.edu.ru">school_73@samara.edu.ru</a></p>
+        <p style="margin-top: 15px; opacity: 0.5;">&copy; 2024 School Terminal Project. All systems operational.</p>
+    </footer>
+
+    <!-- ВИРТУАЛЬНЫЙ ПОМОЩНИК -->
+    <div class="assistant" id="assistant">
+        <div class="assistant-bubble" id="assistantBubble">
+            <span class="bubble-title">> ПОМОЩНИК.TXT</span>
+            <div id="assistantText">Привет! Наведи на любой элемент, и я расскажу, как он работает в коде.</div>
+        </div>
+        <div class="assistant-char" id="assistantChar" title="Виртуальный помощник">
+            <span class="assistant-face" id="assistantFace">>_</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
